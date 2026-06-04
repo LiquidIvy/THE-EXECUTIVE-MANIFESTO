@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Executive Manifesto | ZPCB Framework</title>
     <style>
+        /* Updated color variables derived from image_1.png */
         :root {
-            --bg-color: #0b0f17;
-            --surface-color: #111827;
-            --border-color: #1f2937;
-            --text-primary: #f3f4f6;
-            --text-secondary: #9ca3af;
-            --accent-color: #10b981;
-            --accent-glow: rgba(16, 185, 129, 0.15);
+            /* Background: a dark, sophisticated blue-to-deep-purple gradient from the logo */
+            --bg-color-top: #0e1e35;
+            --bg-color-bottom: #1c1441;
+            /* Surface/Panel: a dark blue-grey */
+            --surface-color: #1a233b;
+            /* Border: a dark blue-grey */
+            --border-color: #313c54;
+            /* Text (Primary): a light metallic silver/white like the logo 'R' and eagle */
+            --text-primary: #e8e8e8;
+            /* Text (Secondary): a muted blue-grey */
+            --text-secondary: #adb6c4;
+            /* Accent: a clean, bright sky blue from the logo gradient */
+            --accent-color: #34c0f1;
+            /* Accent Glow: an extremely subtle sky blue halo */
+            --accent-glow: rgba(52, 192, 241, 0.08);
+            
             --font-serif: 'Playfair Display', Georgia, Cambria, "Times New Roman", Times, serif;
             --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             --font-mono: 'JetBrains Mono', 'Fira Code', Courier, monospace;
@@ -25,13 +35,15 @@
         }
 
         body {
-            background-color: var(--bg-color);
+            /* Updated to use a vertical linear gradient */
+            background: linear-gradient(to bottom, var(--bg-color-top), var(--bg-color-bottom));
             color: var(--text-primary);
             font-family: var(--font-sans);
             line-height: 1.8;
             padding: 4rem 2rem;
             display: flex;
             justify-content: center;
+            min-height: 100vh; /* Ensure the gradient covers the whole viewport */
         }
 
         .container {
@@ -155,7 +167,8 @@
         }
 
         .callout {
-            background: linear-gradient(135deg, var(--surface-color) 0%, rgba(17, 24, 39, 0.6) 100%);
+            /* Adjusted callout for logo's rich colors */
+            background: linear-gradient(135deg, var(--surface-color) 0%, rgba(26, 35, 59, 0.6) 100%);
             border: 1px solid var(--border-color);
             border-left: 4px solid var(--accent-color);
             padding: 2rem;
