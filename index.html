@@ -125,6 +125,47 @@
             font-size: 1.15rem;
         }
 
+        /* Table Styling Added Here */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2.5rem 0;
+            background-color: var(--surface-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+        }
+
+        th, td {
+            padding: 1.25rem;
+            border: 1px solid var(--border-color);
+            text-align: left;
+            vertical-align: top;
+            line-height: 1.5;
+        }
+
+        th {
+            font-family: var(--font-mono);
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background-color: rgba(0,0,0,0.2);
+        }
+
+        td {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        td span.arrow {
+            color: var(--accent-color);
+            font-family: var(--font-mono);
+            margin: 0 0.2rem;
+        }
+
         .formula-box {
             background-color: var(--surface-color);
             border: 1px solid var(--border-color);
@@ -167,7 +208,6 @@
         }
 
         .callout {
-            /* Adjusted callout for logo's rich colors */
             background: linear-gradient(135deg, var(--surface-color) 0%, rgba(26, 35, 59, 0.6) 100%);
             border: 1px solid var(--border-color);
             border-left: 4px solid var(--accent-color);
@@ -234,6 +274,34 @@
             .formula {
                 font-size: 1.5rem;
             }
+            table, th, td {
+                display: block;
+                width: 100%;
+            }
+            th {
+                display: none;
+            }
+            td {
+                border: none;
+                border-bottom: 1px solid var(--border-color);
+                position: relative;
+                padding-left: 50%;
+            }
+            td::before {
+                position: absolute;
+                left: 1rem;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                font-family: var(--font-mono);
+                color: var(--accent-color);
+                font-size: 0.8rem;
+                text-transform: uppercase;
+            }
+            td:nth-of-type(1)::before { content: "Paradigm"; }
+            td:nth-of-type(2)::before { content: "Architectural Flow"; }
+            td:nth-of-type(3)::before { content: "Primary Characteristic"; }
+            td:nth-of-type(4)::before { content: "Liability Profile"; }
         }
     </style>
 </head>
@@ -246,6 +314,45 @@
         </header>
 
         <main>
+            <section>
+                <h2>The Memory Hoarder vs. Memory Metabolizer Paradigm</h2>
+                <p>To understand the transformative nature of this framework, one must contrast the two opposing architectures of machine intelligence.</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Paradigm</th>
+                            <th>Architectural Flow</th>
+                            <th>Primary Characteristic</th>
+                            <th>Liability Profile</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Memory Hoarder</strong><br>(Traditional AI)</td>
+                            <td>
+                                Observe <span class="arrow">&rarr;</span><br>
+                                Store <span class="arrow">&rarr;</span> Train<br>
+                                <span class="arrow">&rarr;</span> Retain Dataset
+                            </td>
+                            <td>Archives all interactions into expansive training corpuses.</td>
+                            <td>Massive regulatory, privacy, and storage liability.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Memory Metabolizer</strong><br>(Hidden Sheath)</td>
+                            <td>
+                                Observe <span class="arrow">&rarr;</span><br>
+                                Learn <span class="arrow">&rarr;</span><br>
+                                Update Weights<br>
+                                <span class="arrow">&rarr;</span> Annihilate Observation
+                            </td>
+                            <td>Extracts mathematical adaptations and destroys raw data.</td>
+                            <td>Zero residual liability; highly efficient edge computing.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
             <section>
                 <h2>The Failure of the Legacy Moat</h2>
                 <p>For decades, the aerospace industry has poured millions into the traditional perimeter model—building massive digital castle walls using firewalls and NAT devices to isolate "trusted" corporate zones from the open internet. That assumption is now comprehensively compromised.</p>
